@@ -2,10 +2,10 @@
 A quiz bee software for the University of the Philippines Mathematics Club
 
 ### About
-## Language
+##### Language
 Python
 
-## Developers
+##### Developers
 Baldelomar, Lopez, Traen, Uy
 
 ### Downloading 
