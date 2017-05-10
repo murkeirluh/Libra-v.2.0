@@ -1,1 +1,1 @@
-@echo off | python fLibra.py
+@echo off | python assets/fLibra.py
