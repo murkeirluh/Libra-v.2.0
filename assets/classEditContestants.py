@@ -196,6 +196,7 @@ class ContestantsListScreen(tk.Frame):
 		self.control.navi_states[-1].quitButton.grid()
 
 
+
 class EditContestantProfileScreen(tk.Frame):
 	def __init__(self, contestant, control):
 		self.root = tk.Tk()
@@ -218,9 +219,9 @@ class EditContestantProfileScreen(tk.Frame):
 		## essential variables ##
 		self.elements = []
 		self.frames = [tk.Frame(self,bg=light) for i in range(4)]
-		self.field_names = 'Key', 'Sound', 'Round', 'Score'
-		self.fields_labels = [tk.Label(self.frames[2], font=self.main_font, text=self.field_names[i], anchor=tk.W, justify=tk.LEFT, bg=light) for i in range(4)]
-		self.fields = [tk.Entry(self.frames[2]) for i in range(4)]
+		self.field_names = 'Key', 'Sound', 'Score'
+		self.fields_labels = [tk.Label(self.frames[2], font=self.main_font, text=self.field_names[i], anchor=tk.W, justify=tk.LEFT, bg=light) for i in range(3)]
+		self.fields = [tk.Entry(self.frames[2]) for i in range(3)]
 		self.contestantText = tk.Label(self.frames[0], text="Contestant Number", font=self.main_font, justify=tk.CENTER, relief=tk.FLAT, anchor=tk.CENTER, bg=light)
 
 		self.smalltextField = tk.Entry(self.frames[0], width=3)
@@ -239,13 +240,7 @@ class EditContestantProfileScreen(tk.Frame):
 	def set(self):
 		self.contestant.setKey(self.fields[0].get())
 		self.contestant.setSound(self.fields[1].get())
-
-		for i in range(self.control.roundCount):
-			if self.control.rounds[i].getName() == self.fields[2].get():
-				self.contestant.setRound(self.control.rounds[i])
-				break
-
-		self.contestant.setScore(int(self.fields[3].get()))
+		self.contestant.setScore(int(self.fields[2].get()))
 
 		# log set fields
 		self.contestant.getAll()
@@ -273,8 +268,7 @@ class EditContestantProfileScreen(tk.Frame):
 		# if fields are already set beforehand, display values
 		self.fields[0].insert(tk.END, self.contestant.getKey())
 		self.fields[1].insert(tk.END, self.contestant.getSound())
-		self.fields[2].insert(tk.END, self.contestant.getRound().getName())
-		self.fields[3].insert(tk.END, self.contestant.getScore())
+		self.fields[2].insert(tk.END, self.contestant.getScore())
 
 		self.setButton.grid(column=3)
 		self.grid()
