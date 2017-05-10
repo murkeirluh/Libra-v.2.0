@@ -18,7 +18,7 @@ except ImportError:
 debug = False
 logtofile = True
 
-a = "activitylog"
+a = "logs/activitylog"
 b = ".txt"
 timestr = time.strftime("%Y%m%d")
 a = a + timestr + b
@@ -54,11 +54,11 @@ class Timer:
 		# queue reference
 		self.queue = queue
 		# sound
-		self.sound = "sounds/din.wav"
+		self.sound = "assets/sounds/din.wav"
 
 		## start/stop button ##
-		self.start_img = Image.open('images/start.png')
-		self.stop_img = Image.open('images/stop.png')
+		self.start_img = Image.open('assets/images/start.png')
+		self.stop_img = Image.open('assets/images/stop.png')
 		self._start = ImageTk.PhotoImage(self.start_img)
 		self._stop = ImageTk.PhotoImage(self.stop_img)
 		self.start_button = tk.Label(master, image=self._start, bg=light)
@@ -93,7 +93,7 @@ class Timer:
 			self._timer.set(self.time)
 			self.label.after_cancel(self.id)
 			self.label.config(fg='red')
-			if is_windows_os: winsound.PlaySound("sounds/timesup.wav", winsound.SND_FILENAME and winsound.SND_ASYNC)
+			if is_windows_os: winsound.PlaySound("assets/sounds/timesup.wav", winsound.SND_FILENAME and winsound.SND_ASYNC)
 			_debug("Time is up!")
 			self.id = self.label.after(1000, self.reset)
 

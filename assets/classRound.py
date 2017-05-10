@@ -11,7 +11,7 @@ import time
 debug = True
 logtofile = True
 
-a = "activitylog"
+a = "logs/activitylog"
 b = ".txt"
 timestr = time.strftime("%Y%m%d")
 a = a + timestr + b

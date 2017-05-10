@@ -16,9 +16,19 @@ from colors import *
 
 debug = True
 
+a = "logs/activitylog"
+b = ".txt"
+timestr = time.strftime("%Y%m%d")
+a = a + timestr + b
+logfile = open(a, "a")
+
 def _debug(*args, **kwargs):
     if debug:
     	print("[DEBUG]", *args, file=sys.stderr, **kwargs)
+
+def log(*args, **kwargs):
+	if logtofile:
+		print("[" + str(datetime.datetime.now()) + "]", *args, file=logfile, **kwargs)
 
 #### EDIT ROUNDS SCREEN ####
 class EditRoundsScreen(tk.Frame):
@@ -114,7 +124,6 @@ class EditRoundsScreen(tk.Frame):
 			self.control.log("Edit rounds closed.")
 			self.root.wm_withdraw()
 			self.quit()
-			_debug("here sa edit rounds")
 
 
 class ViewSettingsScreen(tk.Frame):

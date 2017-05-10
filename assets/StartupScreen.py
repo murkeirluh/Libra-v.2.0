@@ -33,7 +33,7 @@ class __StartupScreen__(tk.Frame):
 		self.frame2 = tk.Frame(self, bg=dark)
 
 		## logo ##
-		self.path = "images/upmc logo.png"
+		self.path = "assets/images/upmc logo.png"
 		self.img = Image.open(self.path)
 		self.resImg = self.img.resize((300,300), Image.ANTIALIAS)
 		self.upmc = ImageTk.PhotoImage(self.resImg)

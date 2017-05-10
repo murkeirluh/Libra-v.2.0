@@ -17,7 +17,7 @@ except ImportError:
 debug = True
 logtofile = True
 
-a = "activitylog"
+a = "logs/activitylog"
 b = ".txt"
 timestr = time.strftime("%Y%m%d")
 a = a + timestr + b
@@ -63,7 +63,7 @@ class Contestant:
 		elif self.number == 6:
 			self.key = "u" # contestant 6
 		# sound assignment
-		self.sound = "sounds/"+str(self.number)+".wav"
+		self.sound = "assets/sounds/"+str(self.number)+".wav"
 		# round assignment
 		self.round = Round(1)
 		# current score
@@ -75,9 +75,9 @@ class Contestant:
 
 		## buttons ##
 		# photo filename
-		self._photo = "images/contestant"+str(self.number)+".png"
+		self._photo = "assets/images/contestant"+str(self.number)+".png"
 		# transparent photo filename
-		self._t_photo = "images/contestant"+str(self.number)+"_t.png"
+		self._t_photo = "assets/images/contestant"+str(self.number)+"_t.png"
 		# for displaying contestant photo
 		self.button = tk.Label(master, bg=light)
 		# contestant photo
@@ -96,8 +96,8 @@ class Contestant:
 			self.photo = ImageTk.PhotoImage(Image.open(self._photo))
 			self.t_photo = ImageTk.PhotoImage(Image.open(self._t_photo))
 		except Exception:
-			self._photo = "images/" + str(self.getNum()) + ".png"
-			self._t_photo = "images/" + str(self.getNum()) + ".png"
+			self._photo = "assets/images/" + str(self.getNum()) + ".png"
+			self._t_photo = "assets/images/" + str(self.getNum()) + ".png"
 		finally:
 			self.photo = ImageTk.PhotoImage(Image.open(self._photo))
 			self.t_photo = ImageTk.PhotoImage(Image.open(self._t_photo))
@@ -111,8 +111,8 @@ class Contestant:
 	# if upload photo is on display, photo color will invert
 	# else, contestant number will be printed on console
 	def __on__press(self, event):
-		if self._photo == "images/upload1.png":
-			self._photo = "images/upload2.png"
+		if self._photo == "assets/images/upload1.png":
+			self._photo = "assets/images/upload2.png"
 			self.photo = ImageTk.PhotoImage(Image.open(self._photo))
 			self.button.config(image=self.photo)
 			self.button.update()
@@ -122,8 +122,8 @@ class Contestant:
 	# behavior on mousebutton release
 	# if upload photo is on display, photo color will revert
 	def __on__release(self, event):
-		if self._photo == "images/upload2.png":
-			self._photo = "images/upload1.png"
+		if self._photo == "assets/images/upload2.png":
+			self._photo = "assets/images/upload1.png"
 			self.photo = ImageTk.PhotoImage(Image.open(self._photo))
 			self.button.config(image=self.photo)
 			self.button.update()
@@ -210,11 +210,11 @@ class Contestant:
 
 	# plays correct sound
 	def correct(self):
-		if is_windows_os: winsound.PlaySound("sounds/correct.wav", winsound.SND_FILENAME and winsound.SND_ASYNC)
+		if is_windows_os: winsound.PlaySound("assets/sounds/correct.wav", winsound.SND_FILENAME and winsound.SND_ASYNC)
 
 	# plays wrong sound
 	def wrong(self):
-		if is_windows_os: winsound.PlaySound("sounds/correct.wav", winsound.SND_FILENAME and winsound.SND_ASYNC)
+		if is_windows_os: winsound.PlaySound("assets/sounds/correct.wav", winsound.SND_FILENAME and winsound.SND_ASYNC)
 
 	# prints all contestant's attributes
 	def getAll(self):
@@ -238,18 +238,18 @@ class Contestant:
 		self._upload()
 
 	def _upload(self):
-		path = tkFileDialog.askopenfilename(filetypes=[('Image files',('.png','.jpg', '.jpeg'))], title='Choose contestant photo', initialdir='/images/')
+		path = tkFileDialog.askopenfilename(filetypes=[('Image files',('.png','.jpg', '.jpeg'))], title='Choose contestant photo', initialdir='/assets/images/')
 		# handles exception if file is not found or no filename was entered.
 		# finds a photo named (self.number).png or .jpg if no filename was entered
 		try:
 			im = Image.open(path)
 		except IOError:
 			try:
-				path = "images/"+str(self.number)+".png"
+				path = "assets/images/"+str(self.number)+".png"
 				im = Image.open(path)
 			except IOError:
 				self.control.log("Error: " + str(self.number) + ".png not found")
-				path = "images/"+str(self.number)+".jpg"
+				path = "assets/images/"+str(self.number)+".jpg"
 				self.control.log("Setting " + str(self.number) + ".jpg as path")
 				im = Image.open(path)
 		except:
@@ -262,25 +262,25 @@ class Contestant:
 	# manipulates photo into a circular photo
 	def manip_photo(self, path=None):
 		size = (190, 190)
-		mask = Image.open('images/mask.png').convert('L')
-		t_mask = Image.open('images/t_mask.png').convert('L')
+		mask = Image.open('assets/images/mask.png').convert('L')
+		t_mask = Image.open('assets/images/t_mask.png').convert('L')
 		draw = ImageDraw.Draw(mask)
 		t_draw = ImageDraw.Draw(t_mask)
 		draw.ellipse((0,0) + size, fill=255)
 		if path:
 			im = Image.open(path)
 		else:
-			path = "images/"+str(self.number)+".png"
+			path = "assets/images/"+str(self.number)+".png"
 			im = Image.open(path)
 		self.photo = ImageOps.fit(im, mask.size, centering=(0.5, 0.5))
 		self.photo.putalpha(mask)
-		self.photo.save("images/contestant"+str(self.number)+".png")
+		self.photo.save("assets/images/contestant"+str(self.number)+".png")
 		self.t_photo = ImageOps.fit(im, t_mask.size, centering=(0.5, 0.5))
 		self.t_photo.putalpha(t_mask)
-		self.t_photo.save("images/contestant"+str(self.number)+"_t.png")
-		self.t_photo = ImageTk.PhotoImage(Image.open("images/contestant"+str(self.number)+"_t.png"))
-		self.photo = ImageTk.PhotoImage(Image.open("images/contestant"+str(self.number)+"_t.png"))
-		self._photo = "images/contestant"+str(self.number)+".png"
+		self.t_photo.save("assets/images/contestant"+str(self.number)+"_t.png")
+		self.t_photo = ImageTk.PhotoImage(Image.open("assets/images/contestant"+str(self.number)+"_t.png"))
+		self.photo = ImageTk.PhotoImage(Image.open("assets/images/contestant"+str(self.number)+"_t.png"))
+		self._photo = "assets/images/contestant"+str(self.number)+".png"
 		self.button.config(image=self.t_photo)
 
 #########		  CUSTOM BUTTON 		  #########

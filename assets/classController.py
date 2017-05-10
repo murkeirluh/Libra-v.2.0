@@ -17,7 +17,7 @@ except ImportError:
 debug = True
 logtofile = True
 
-a = "activitylog"
+a = "logs/activitylog"
 b = ".txt"
 timestr = time.strftime("%Y%m%d")
 a = a + timestr + b
@@ -79,7 +79,7 @@ class Controller:
 	# log function
 	def log(self,*args, **kwargs):
 		if self.logtofile:
-			a = "activitylog"
+			a = "logs/activitylog"
 			b = ".txt"
 			timestr = time.strftime("%Y%m%d")
 			a = a + timestr + b
@@ -100,7 +100,7 @@ class Controller:
 
 	def log_driver(self):
 		if self.logtofile:
-			a = "activitylog"
+			a = "logs/activitylog"
 			b = ".txt"
 			timestr = time.strftime("%Y%m%d")
 			a = a + timestr + b

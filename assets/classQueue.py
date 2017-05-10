@@ -10,7 +10,7 @@ import time
 debug = True
 logtofile = True
 
-a = "activitylog"
+a = "logs/activitylog"
 b = ".txt"
 timestr = time.strftime("%Y%m%d")
 a = a + timestr + b
@@ -23,7 +23,6 @@ def _debug(*args, **kwargs):
 def log(*args, **kwargs):
 	if logtofile:
 		print("[" + str(datetime.datetime.now()) + "]", *args, file=logfile, **kwargs)
-
 
 #########		  QUEUE 		  #########
 
@@ -40,7 +39,7 @@ class Queue(deque):
 
 	def _print(self):
 		log("Queue: ")
-		_debug("Queue: ")
+		sys.stderr.write("[DEBUG] Queue: ")
 		if (len(self)):
 			for i in range(len(self)):
 				log(str(self[i].getNum()) + " ")

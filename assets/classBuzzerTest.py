@@ -81,7 +81,7 @@ class BuzzerTestScreen(tk.Frame):
 
 	def buzz_test(self, number):
 		if is_windows_os:
-			winsound.PlaySound("sounds/"+str(number+1)+".wav", winsound.SND_FILENAME and winsound.SND_ASYNC)
+			winsound.PlaySound("assets/sounds/"+str(number+1)+".wav", winsound.SND_FILENAME and winsound.SND_ASYNC)
 		self.buzzLabel.config(text="Buzzer #" + str(number+1) + " is okay!")
 		self.buzzLabel.update()
 

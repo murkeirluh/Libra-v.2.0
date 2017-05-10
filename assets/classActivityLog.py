@@ -47,7 +47,7 @@ class ActivityLogScreen(tk.Frame):
 		try:
 			text = self.control.logfile.read()
 		except:
-			a = "activitylog"
+			a = "logs/activitylog"
 			b = ".txt"
 			timestr = time.strftime("%Y%m%d")
 			a = a + timestr + b
