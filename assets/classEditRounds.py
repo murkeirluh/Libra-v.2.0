@@ -1,6 +1,6 @@
 from __future__ import print_function
 from PIL import ImageTk, Image
-import sys
+import sys, os
 import Tkinter as tk
 import tkFont, tkMessageBox
 from Tkinter import Text
@@ -15,8 +15,18 @@ from classController import *
 from colors import *
 
 debug = True
+logtofile = True
 
-a = "logs/activitylog"
+# check directory
+dirc = os.getcwd().split('\\')
+path = ""
+if dirc[-1] != 'libra': 
+	dirc = dirc[:dirc.index('libra')+1]
+	for d in dirc:
+		path += d + "\\"
+	os.chdir(path)
+
+a = "assets/logs/activitylog"
 b = ".txt"
 timestr = time.strftime("%Y%m%d")
 a = a + timestr + b
@@ -348,7 +358,7 @@ class HowManyRoundsScreen(tk.Frame):
 		y = self.root.winfo_screenheight() - (self.root.winfo_screenheight() / 2) - self.root.winfo_height() - 50
 		self.root.geometry('+'+str(x)+'+'+str(y))
 		tk.Frame.__init__(self, self.root, bd=4, width=800, bg=light)
-		self.title = "Custom Rounds Setting - Round Count"
+		self.title = "Round Count Setting"
 		self.root.title(self.title)
 		self.control = control
 
@@ -445,7 +455,7 @@ class RoundNumberandTypeScreen(tk.Frame):
 		self.root.wm_withdraw()
 		self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
 		tk.Frame.__init__(self, self.root, bd=4, width=800, bg=light)
-		self.title = "Custom Rounds Setting - Round Details"
+		self.title = "Round Details Configuration"
 		self.root.title(self.title)
 		self.control = control
                 self.round_number = round_number
@@ -545,12 +555,13 @@ class PointsAndTimerSettingScreen(tk.Frame):
 		x = (self.root.winfo_screenwidth()) - (self.root.winfo_screenwidth() / 2) - self.root.winfo_width() - 100
 		y = self.root.winfo_screenheight() - (self.root.winfo_screenheight() / 2) - self.root.winfo_height() - 50
 		self.root.geometry('+'+str(x)+'+'+str(y))
-		tk.Frame.__init__(self, self.root, bd=4, width=800, bg=light)
-		self.title = "Custom Round Setting - Points and Time"
-		self.root.title(self.title)
 		self.control = control
 		self.round_number = round_number
 		self.roundAddress = self.control.rounds[round_number]
+		tk.Frame.__init__(self, self.root, bd=4, width=800, bg=light)
+		self.title = self.control.rounds[round_number].getName() + " - Points and Timer Settings"
+		self.root.title(self.title)
+		
 
 		## customization variables ##
 		self.main_font = tkFont.Font(self, family='Code Bold', size=15)

@@ -1,6 +1,6 @@
 from __future__ import print_function
 from collections import deque
-import sys, datetime # winsound
+import sys, datetime, os
 import Tkinter as tk
 import tkFileDialog, tkFont, tkMessageBox
 from PIL import Image, ImageOps, ImageDraw, ImageTk
@@ -17,7 +17,16 @@ except ImportError:
 debug = True
 logtofile = True
 
-a = "logs/activitylog"
+# check directory
+dirc = os.getcwd().split('\\')
+path = ""
+if dirc[-1] != 'libra': 
+	dirc = dirc[:dirc.index('libra')+1]
+	for d in dirc:
+		path += d + "\\"
+	os.chdir(path)
+
+a = "assets/logs/activitylog"
 b = ".txt"
 timestr = time.strftime("%Y%m%d")
 a = a + timestr + b
@@ -30,8 +39,6 @@ def _debug(*args, **kwargs):
 def log(*args, **kwargs):
 	if logtofile:
 		print("[" + str(datetime.datetime.now()) + "]", *args, file=logfile, **kwargs)
-
-
 
 class Controller:
 	def __init__(self):
@@ -79,7 +86,7 @@ class Controller:
 	# log function
 	def log(self,*args, **kwargs):
 		if self.logtofile:
-			a = "logs/activitylog"
+			a = "assets/logs/activitylog"
 			b = ".txt"
 			timestr = time.strftime("%Y%m%d")
 			a = a + timestr + b
@@ -100,7 +107,7 @@ class Controller:
 
 	def log_driver(self):
 		if self.logtofile:
-			a = "logs/activitylog"
+			a = "assets/logs/activitylog"
 			b = ".txt"
 			timestr = time.strftime("%Y%m%d")
 			a = a + timestr + b

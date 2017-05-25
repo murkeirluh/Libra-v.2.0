@@ -1,6 +1,6 @@
 from __future__ import print_function
 from PIL import ImageTk, Image
-import sys
+import sys, os
 import Tkinter as tk
 import tkFont, tkMessageBox
 from Tkinter import Text
@@ -14,6 +14,14 @@ from classController import *
 
 from colors import *
 
+# check directory
+dirc = os.getcwd().split('\\')
+path = ""
+if dirc[-1] != 'libra': 
+	dirc = dirc[:dirc.index('libra')+1]
+	for d in dirc:
+		path += d + "\\"
+	os.chdir(path)
 
 #### ACTIVITY LOG SCREEN ####
 
@@ -47,7 +55,7 @@ class ActivityLogScreen(tk.Frame):
 		try:
 			text = self.control.logfile.read()
 		except:
-			a = "logs/activitylog"
+			a = "assets/logs/activitylog"
 			b = ".txt"
 			timestr = time.strftime("%Y%m%d")
 			a = a + timestr + b

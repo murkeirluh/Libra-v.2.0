@@ -106,7 +106,7 @@ class __MainScreen__(tk.Frame):
 		self.bind_all('<KeyPress-Shift_R>', self.timer.stop)
 
 		self.winner = 0
-		self.control.log("Question #", self.questionNumber, "("+str(self.round.question_pts[self.questionNumber-1]), "points for", self.time, "seconds)")
+		self.control.log("Question #"+str(self.questionNumber), "("+str(self.round.question_pts[self.questionNumber-1]), "points for", str(self.round.timer_seconds[self.questionNumber-1]), "seconds)")
 
 	# buzz function
 	# currently bound to a, b, c, d, e
@@ -256,8 +256,8 @@ class __MainScreen__(tk.Frame):
 			time.sleep(0.15)
 			self.questionNumber_label.config(fg=light_txt)
 			self.questionNumber_label.update()
-			_debug("Next question")
-			self.control.log("Question #", self.questionNumber, "("+str(self.round.question_pts[self.questionNumber-1]), "points for", self.time, "seconds)")
+			#_debug("Next question")
+			self.control.log("Question #"+str(self.questionNumber), "("+str(self.round.question_pts[self.questionNumber-1]), "points for", str(self.round.timer_seconds[self.questionNumber-1]), "seconds)")
 		elif self.questionNumber >= self.round.questionCount:
 			if self.checkTies() == True:
 				_debug("Ties found.")
@@ -267,7 +267,6 @@ class __MainScreen__(tk.Frame):
 				self.questionNumber_label.config(fg=light_txt)
 				self.questionNumber_label.update()
 			else:
-				_debug("STOP INCREMENT")
 				self.questionNumber = 1
 				self.quit()
 				self.destroy()
@@ -288,9 +287,8 @@ class __MainScreen__(tk.Frame):
 		time.sleep(0.15)
 		self.questionNumber_label.config(fg=light_txt)
 		self.questionNumber_label.update()
-		self.control.log("Question #", self.questionNumber, "("+str(self.round.question_pts[self.questionNumber-1]), "points for", self.time, "seconds)")
+		self.control.log("Question #"+str(self.questionNumber), "("+str(self.round.question_pts[self.questionNumber-1]), "points for", str(self.round.timer_seconds[self.questionNumber-1]), "seconds)")
 		
-
 	def checkTies(self):
 		if self.control.default_rounds:
 			curr = 0
@@ -312,10 +310,6 @@ class __MainScreen__(tk.Frame):
 			scores.sort()
 			_debug(scores)
 			_debug(curr, second, third)
-
-			_debug(scores.count(curr))
-			_debug(scores.count(second))
-			_debug(scores.count(third))
 			if curr != 0:
 				if (scores.count(curr) > 1):
 					return True
@@ -329,29 +323,6 @@ class __MainScreen__(tk.Frame):
 				return False
 		else:
 			return False
-
-	def getplacers(self):
-		if self.control.default_rounds:
-			for i in range(3):
-				curr = 0
-				for c in self.contestants:
-					if c.getScore() > curr:
-						self.winner = c
-						curr = c.getScore()
-
-				if self.winner != 0:
-					_debug(self.winner.getScore())
-					self.contestants.remove(self.winner)
-					if i == 0:
-						self.winner.setRound(self.control.rounds[4])
-						self.control.winners.append(self.winner)
-					else:
-						self.winner.setRound(self.control.rounds[3])
-						self.control.clinchers.append(self.winner)
-			if self.winner == 0:
-				return 0
-		else:
-			return 0
 
 	# copy info from contestants_info array
 	def copy_info(self):

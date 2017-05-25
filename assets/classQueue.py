@@ -1,6 +1,6 @@
 from __future__ import print_function
 from collections import deque
-import sys, datetime # winsound
+import sys, datetime, os
 import Tkinter as tk
 import tkFileDialog, tkFont, tkMessageBox
 from PIL import Image, ImageOps, ImageDraw, ImageTk
@@ -10,7 +10,16 @@ import time
 debug = True
 logtofile = True
 
-a = "logs/activitylog"
+# check directory
+dirc = os.getcwd().split('\\')
+path = ""
+if dirc[-1] != 'libra': 
+	dirc = dirc[:dirc.index('libra')+1]
+	for d in dirc:
+		path += d + "\\"
+	os.chdir(path)
+
+a = "assets/logs/activitylog"
 b = ".txt"
 timestr = time.strftime("%Y%m%d")
 a = a + timestr + b
@@ -45,3 +54,4 @@ class Queue(deque):
 				log(str(self[i].getNum()) + " ")
 				sys.stderr.write(str(self[i].getNum()) + " ")
 		else: sys.stderr.write("Empty")
+		sys.stderr.write("\n")

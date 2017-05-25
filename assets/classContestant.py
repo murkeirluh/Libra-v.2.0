@@ -1,6 +1,6 @@
 from __future__ import print_function
 from collections import deque
-import sys, datetime, time # winsound
+import sys, datetime, time, os
 import Tkinter as tk
 import tkFileDialog, tkFont, tkMessageBox
 from PIL import Image, ImageOps, ImageDraw, ImageTk
@@ -17,7 +17,17 @@ except ImportError:
 debug = True
 logtofile = True
 
-a = "logs/activitylog"
+# check directory
+dirc = os.getcwd().split('\\')
+path = ""
+if dirc[-1] != 'libra': 
+	dirc = dirc[:dirc.index('libra')+1]
+	
+	for d in dirc:
+		path += d + "\\"
+	os.chdir(path)
+
+a = "assets/logs/activitylog"
 b = ".txt"
 timestr = time.strftime("%Y%m%d")
 a = a + timestr + b
@@ -31,8 +41,6 @@ def log(*args, **kwargs):
 	if logtofile:
 		print("[" + str(datetime.datetime.now()) + "]", *args, file=logfile, **kwargs)
 
-
-
 #########		  CONTESTANT 		  #########
 
 class Contestant:
@@ -44,8 +52,6 @@ class Contestant:
 		## contestant info ##
 		self.number = number%6
 		if self.number == 0: self.number = 6
-		#self.name = ""
-		#self.school = ""
 
 		## game variables ##
 		# key assignment

@@ -1,6 +1,6 @@
 from __future__ import print_function
 from PIL import ImageTk, Image
-import sys
+import sys, os
 import Tkinter as tk
 import tkFont, tkMessageBox
 from Tkinter import Text
