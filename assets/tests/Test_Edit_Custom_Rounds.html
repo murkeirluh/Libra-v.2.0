@@ -1,0 +1,973 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>Test Edit Custom Rounds</title>
+</head>
+<body>
+<h1>Test Edit Custom Rounds</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Documentation</td>
+<td class="colspan4" colspan="4">Create custom rounds for testing.</td>
+</tr>
+<tr>
+<td class="name">Suite Setup</td>
+<td>Run Libra</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Suite Teardown</td>
+<td>Close Window</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>SikuliLibrary</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>AutoItLibrary</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="variable">
+<tr>
+<th class="name" colspan="5">Variables</th>
+</tr>
+<tr>
+<td class="name">${RNDCNT}</td>
+<td>Round Count Setting</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${RNDDTLS}</td>
+<td>Round Details Configuration</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${PTRTMR}</td>
+<td>One - Points and Timer Settings</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${RNDNAME}</td>
+<td>One</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="testcase">
+<tr>
+<th class="name" colspan="5">Test Cases</th>
+</tr>
+<tr>
+<td class="name"><a name="test_Create custom rounds">Create custom rounds</a></td>
+<td>Set Rounds Screen</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Fill round count</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Show fill</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Round Details</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Show round details</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set points and timer</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Show point and timer setting</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Show Summary Screen</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Start Game</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keywords</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Run Libra">Run Libra</a></td>
+<td>Run</td>
+<td>run.bat</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Libra v.2.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Set Rounds Screen">Set Rounds Screen</a></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>880</td>
+<td>411</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Edit Rounds</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>689</td>
+<td>301</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>${RNDCNT}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Fill round count">Fill round count</a></td>
+<td>Control Focus</td>
+<td>${RNDCNT}</td>
+<td></td>
+<td>TkChild6</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>1s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Click</td>
+<td>${RNDCNT}</td>
+<td></td>
+<td>TkChild6</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td></td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Set Text</td>
+<td>${RNDCNT}</td>
+<td></td>
+<td>TkChild6</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text} =</td>
+<td>Control Get Text</td>
+<td>[CLASS:TkTopLevel]</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>TkChild6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Show fill">Show fill</a></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>629</td>
+<td>181</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Send</td>
+<td>${RNDCNT}</td>
+<td></td>
+<td>TkChild6</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>587</td>
+<td>244</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Set Round Details">Set Round Details</a></td>
+<td>Wait For Active Window</td>
+<td>${RNDDTLS}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Focus</td>
+<td>${RNDDTLS}</td>
+<td></td>
+<td>TkChild9</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Set Text</td>
+<td>${RNDDTLS}</td>
+<td></td>
+<td>TkChild9</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${RNDNAME}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${roundname} =</td>
+<td>Control Get Text</td>
+<td>${RNDDTLS}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>TkChild9</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${roundname}</td>
+<td>${RNDNAME}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Focus</td>
+<td>${RNDDTLS}</td>
+<td></td>
+<td>TkChild7</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Set Text</td>
+<td>${RNDDTLS}</td>
+<td></td>
+<td>TkChild7</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${qcount} =</td>
+<td>Control Get Text</td>
+<td>${RNDDTLS}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>TkChild7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${qcount}</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Focus</td>
+<td>${RNDDTLS}</td>
+<td></td>
+<td>TkChild5</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Set Text</td>
+<td>${RNDDTLS}</td>
+<td></td>
+<td>TkChild5</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ccount} =</td>
+<td>Control Get Text</td>
+<td>${RNDDTLS}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>TkChild5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${ccount}</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Show round details">Show round details</a></td>
+<td>${win_x} =</td>
+<td>Win Get Pos X</td>
+<td>${RNDDTLS}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_y} =</td>
+<td>Win Get Pos Y</td>
+<td>${RNDDTLS}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x+210}</td>
+<td>${win_y+78}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>1s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>${RNDNAME}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>1s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x+269}</td>
+<td>${win_y+100}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>1s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Send</td>
+<td>${RNDDTLS}</td>
+<td></td>
+<td>TkChild7</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x+279}</td>
+<td>${win_y+129}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>1s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Send</td>
+<td>${RNDDTLS}</td>
+<td></td>
+<td>TkChild5</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x+164}</td>
+<td>${win_y+156}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Set points and timer">Set points and timer</a></td>
+<td>Wait For Active Window</td>
+<td>${PTRTMR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Focus</td>
+<td>${PTRTMR}</td>
+<td></td>
+<td>TkChild6</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>1s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Set Text</td>
+<td>${PTRTMR}</td>
+<td></td>
+<td>TkChild6</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${qpts} =</td>
+<td>Control Get Text</td>
+<td>${PTRTMR}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>TkChild6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${qpts}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Focus</td>
+<td>${PTRTMR}</td>
+<td></td>
+<td>TkChild5</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>1s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Set Text</td>
+<td>${PTRTMR}</td>
+<td></td>
+<td>TkChild5</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>10</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${qtime} =</td>
+<td>Control Get Text</td>
+<td>${PTRTMR}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>TkChild5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${qtime}</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Show point and timer setting">Show point and timer setting</a></td>
+<td>${win_x} =</td>
+<td>Win Get Pos X</td>
+<td>${PTRTMR}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_y} =</td>
+<td>Win Get Pos Y</td>
+<td>${PTRTMR}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x+170}</td>
+<td>${win_y+98}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>1s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Send</td>
+<td>${PTRTMR}</td>
+<td></td>
+<td>TkChild6</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x+280}</td>
+<td>${win_y+98}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>1s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Control Send</td>
+<td>${PTRTMR}</td>
+<td></td>
+<td>TkChild5</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>10</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x+175}</td>
+<td>${win_y+125}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Show Summary Screen">Show Summary Screen</a></td>
+<td>Wait For Active Window</td>
+<td>Rounds Summary</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>735</td>
+<td>640</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Start Game">Start Game</a></td>
+<td>Wait For Active Window</td>
+<td>Libra v.2.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>882</td>
+<td>292</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>One</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>2s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${RSCREENTITLE} =</td>
+<td>Win Get Title</td>
+<td>[ACTIVE]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${RSCREENTITLE}</td>
+<td>${RNDNAME}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>625</td>
+<td>320</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Libra v.2.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>1s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Close Window">Close Window</a></td>
+<td>Win Close</td>
+<td>Libra v.2.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Press Special Key</td>
+<td>ENTER</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>

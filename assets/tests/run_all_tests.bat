@@ -1,0 +1,9 @@
+@echo Run all tests
+
+
+@echo Running Q1 test...
+cd q1test && python test.py
+@echo Running unit test...
+cd ../unittest && python test.py
+@echo Running robot test...
+cd ../.. && python -m robot --outputdir .\results .

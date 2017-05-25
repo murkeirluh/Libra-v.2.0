@@ -1,0 +1,1 @@
+@echo off | python unittest/test.py

@@ -1,0 +1,204 @@
+[2017-05-10 19:48:10.503000] ===============================
+[2017-05-10 19:48:10.514000] LIBRA v. 2.0 START.
+[2017-05-10 19:48:10.535000] Activity logging: True
+[2017-05-10 19:48:16.779000] Edit Rounds
+[2017-05-10 19:48:18.027000] Summary
+[2017-05-10 19:48:24.589000] Prefinal Round 1 start.
+[2017-05-10 19:48:27.684000] Question # 1 (2 points for 15 seconds)
+[2017-05-10 19:48:33.202000] Question # 14 (8 points for 60 seconds)
+[2017-05-10 19:48:33.521000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:48:33.614000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:48:33.630000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:48:33.648000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:48:33.665000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:48:33.720000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:48:33.749000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:48:33.766000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:48:33.781000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:48:33.797000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:48:33.813000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:48:33.863000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:48:33.879000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:48:33.907000] Prefinal Round 2 start.
+[2017-05-10 19:48:55.053000] Question # 1 (2 points for 15 seconds)
+[2017-05-10 19:48:58.969000] Question # 12 (6 points for 45 seconds)
+[2017-05-10 19:48:59.218000] Question # 13 (8 points for 60 seconds)
+[2017-05-10 19:48:59.235000] Question # 13 (8 points for 60 seconds)
+[2017-05-10 19:48:59.252000] Question # 13 (8 points for 60 seconds)
+[2017-05-10 19:48:59.489000] Question # 14 (8 points for 60 seconds)
+[2017-05-10 19:48:59.505000] Question # 14 (8 points for 60 seconds)
+[2017-05-10 19:48:59.522000] Question # 14 (8 points for 60 seconds)
+[2017-05-10 19:48:59.899000] Question # 15 (10 points for 90 seconds)
+[2017-05-10 19:48:59.917000] Question # 15 (10 points for 90 seconds)
+[2017-05-10 19:48:59.935000] Question # 15 (10 points for 90 seconds)
+[2017-05-10 19:48:59.951000] Question # 15 (10 points for 90 seconds)
+[2017-05-10 19:49:00.063000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:00.078000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:00.095000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:00.115000] Prefinal Round 3 start.
+[2017-05-10 19:49:02.771000] Question # 1 (2 points for 15 seconds)
+[2017-05-10 19:49:07.303000] Question # 12 (6 points for 45 seconds)
+[2017-05-10 19:49:07.321000] Question # 12 (6 points for 45 seconds)
+[2017-05-10 19:49:07.336000] Question # 12 (6 points for 45 seconds)
+[2017-05-10 19:49:07.924000] Question # 15 (10 points for 90 seconds)
+[2017-05-10 19:49:07.939000] Question # 15 (10 points for 90 seconds)
+[2017-05-10 19:49:07.955000] Question # 15 (10 points for 90 seconds)
+[2017-05-10 19:49:07.969000] Question # 15 (10 points for 90 seconds)
+[2017-05-10 19:49:07.986000] Question # 15 (10 points for 90 seconds)
+[2017-05-10 19:49:08.049000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:08.063000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:08.085000] Question # 2 (2 points for 15 seconds)
+[2017-05-10 19:49:08.107000] Question # 2 (2 points for 15 seconds)
+[2017-05-10 19:49:08.169000] Question # 2 (2 points for 15 seconds)
+[2017-05-10 19:49:08.186000] Question # 2 (2 points for 15 seconds)
+[2017-05-10 19:49:08.206000] Wildcard Round start.
+[2017-05-10 19:49:10.270000] Question # 1 (2 points for 15 seconds)
+[2017-05-10 19:49:11.530000] Contestant number 1 has buzzed!
+[2017-05-10 19:49:11.702000] Contestant number 1 got it correct!
+[2017-05-10 19:49:11.875000] Contestant 1 score: 2
+[2017-05-10 19:49:36.010000] Contestant #5
+[2017-05-10 19:49:36.023000] Key: [
+[2017-05-10 19:49:36.035000] Sound: assets/sounds/5.wav
+[2017-05-10 19:49:36.049000] Round: Wildcard Round
+[2017-05-10 19:49:38.513000] Rounds list screen window closed1.
+[2017-05-10 19:49:47.750000] Question # 3 (2 points for 15 seconds)
+[2017-05-10 19:49:47.776000] Question # 3 (2 points for 15 seconds)
+[2017-05-10 19:49:49.108000] Question # 7 (4 points for 30 seconds)
+[2017-05-10 19:49:50.339000] Question # 14 (8 points for 60 seconds)
+[2017-05-10 19:49:50.635000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:50.652000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:50.671000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:50.690000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:50.707000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:50.725000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:50.899000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:50.917000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:50.935000] Question # 1 (2 points for 90 seconds)
+[2017-05-10 19:49:50.957000] Final Round start.
+[2017-05-10 19:49:52.979000] Question # 1 (2 points for 15 seconds)
+[2017-05-10 19:49:55.379000] Question # 5 (2 points for 15 seconds)
+[2017-05-10 19:49:55.394000] Question # 5 (2 points for 15 seconds)
+[2017-05-10 19:49:55.411000] Question # 5 (2 points for 15 seconds)
+[2017-05-10 19:49:55.430000] Question # 5 (2 points for 15 seconds)
+[2017-05-10 19:49:58.180000] Question # 19 (10 points for 90 seconds)
+[2017-05-10 19:49:58.197000] Question # 19 (10 points for 90 seconds)
+[2017-05-10 19:49:58.213000] Question # 19 (10 points for 90 seconds)
+[2017-05-10 19:49:58.231000] Question # 19 (10 points for 90 seconds)
+[2017-05-10 19:49:58.250000] Question # 19 (10 points for 90 seconds)
+[2017-05-10 19:49:58.268000] Question # 19 (10 points for 90 seconds)
+[2017-05-10 19:49:58.282000] Question # 19 (10 points for 90 seconds)
+[2017-05-10 19:49:58.300000] Question # 19 (10 points for 90 seconds)
+[2017-05-10 19:49:58.316000] Question # 19 (10 points for 90 seconds)
+[2017-05-10 19:49:58.331000] Question # 19 (10 points for 90 seconds)
+[2017-05-10 19:49:58.521000] Question # 20 (10 points for 90 seconds)
+[2017-05-10 19:49:58.538000] Question # 20 (10 points for 90 seconds)
+[2017-05-10 19:49:58.554000] Question # 20 (10 points for 90 seconds)
+[2017-05-10 19:49:58.570000] Question # 20 (10 points for 90 seconds)
+[2017-05-10 19:49:58.587000] Question # 20 (10 points for 90 seconds)
+[2017-05-10 19:49:59.471000] Contestant number 1 has buzzed!
+[2017-05-10 19:49:59.759000] Contestant number 1 got it correct!
+[2017-05-10 19:49:59.927000] Contestant 1 score: 10
+[2017-05-10 19:50:00.425000] Contestant number 4 has buzzed!
+[2017-05-10 19:50:00.775000] Contestant number 4 got it correct!
+[2017-05-10 19:50:00.942000] Contestant 4 score: 10
+[2017-05-10 19:50:03.239000] Contestant number 4 has buzzed!
+[2017-05-10 19:50:03.550000] Contestant number 4 got it correct!
+[2017-05-10 19:50:03.718000] Contestant 4 score: 20
+[2017-05-10 19:48:30.457000] Queue: 
+[2017-05-10 19:48:30.659000] Queue: 
+[2017-05-10 19:48:30.863000] Queue: 
+[2017-05-10 19:48:30.898000] Queue: 
+[2017-05-10 19:48:31.100000] Queue: 
+[2017-05-10 19:48:31.312000] Queue: 
+[2017-05-10 19:48:31.511000] Queue: 
+[2017-05-10 19:48:31.711000] Queue: 
+[2017-05-10 19:48:31.915000] Queue: 
+[2017-05-10 19:48:32.114000] Queue: 
+[2017-05-10 19:48:32.142000] Queue: 
+[2017-05-10 19:48:32.346000] Queue: 
+[2017-05-10 19:48:32.545000] Queue: 
+[2017-05-10 19:48:32.750000] Queue: 
+[2017-05-10 19:48:32.954000] Queue: 
+[2017-05-10 19:48:32.998000] Queue: 
+[2017-05-10 19:48:33.218000] Queue: 
+[2017-05-10 19:48:33.416000] Queue: 
+[2017-05-10 19:48:56.834000] Queue: 
+[2017-05-10 19:48:57.037000] Queue: 
+[2017-05-10 19:48:57.239000] Queue: 
+[2017-05-10 19:48:57.450000] Queue: 
+[2017-05-10 19:48:57.491000] Queue: 
+[2017-05-10 19:48:57.703000] Queue: 
+[2017-05-10 19:48:57.905000] Queue: 
+[2017-05-10 19:48:57.955000] Queue: 
+[2017-05-10 19:48:58.156000] Queue: 
+[2017-05-10 19:48:58.358000] Queue: 
+[2017-05-10 19:48:58.562000] Queue: 
+[2017-05-10 19:48:58.765000] Queue: 
+[2017-05-10 19:48:59.018000] Queue: 
+[2017-05-10 19:48:59.287000] Queue: 
+[2017-05-10 19:48:59.695000] Queue: 
+[2017-05-10 19:49:04.927000] Queue: 
+[2017-05-10 19:49:05.126000] Queue: 
+[2017-05-10 19:49:05.329000] Queue: 
+[2017-05-10 19:49:05.343000] Queue: 
+[2017-05-10 19:49:05.546000] Queue: 
+[2017-05-10 19:49:05.746000] Queue: 
+[2017-05-10 19:49:05.794000] Queue: 
+[2017-05-10 19:49:06.001000] Queue: 
+[2017-05-10 19:49:06.201000] Queue: 
+[2017-05-10 19:49:06.239000] Queue: 
+[2017-05-10 19:49:06.445000] Queue: 
+[2017-05-10 19:49:06.645000] Queue: 
+[2017-05-10 19:49:06.691000] Queue: 
+[2017-05-10 19:49:06.897000] Queue: 
+[2017-05-10 19:49:07.101000] Queue: 
+[2017-05-10 19:49:07.505000] Queue: 
+[2017-05-10 19:49:07.710000] Queue: 
+[2017-05-10 19:49:11.555000] Queue: 
+[2017-05-10 19:49:11.561000] 1 
+[2017-05-10 19:49:11.933000] Queue: 
+[2017-05-10 19:49:47.335000] Queue: 
+[2017-05-10 19:49:47.543000] Queue: 
+[2017-05-10 19:49:48.262000] Queue: 
+[2017-05-10 19:49:48.459000] Queue: 
+[2017-05-10 19:49:48.658000] Queue: 
+[2017-05-10 19:49:48.870000] Queue: 
+[2017-05-10 19:49:48.907000] Queue: 
+[2017-05-10 19:49:49.135000] Queue: 
+[2017-05-10 19:49:49.342000] Queue: 
+[2017-05-10 19:49:49.543000] Queue: 
+[2017-05-10 19:49:49.740000] Queue: 
+[2017-05-10 19:49:49.938000] Queue: 
+[2017-05-10 19:49:50.139000] Queue: 
+[2017-05-10 19:49:50.354000] Queue: 
+[2017-05-10 19:49:50.552000] Queue: 
+[2017-05-10 19:49:54.636000] Queue: 
+[2017-05-10 19:49:54.821000] Queue: 
+[2017-05-10 19:49:55.007000] Queue: 
+[2017-05-10 19:49:55.191000] Queue: 
+[2017-05-10 19:49:55.527000] Queue: 
+[2017-05-10 19:49:55.713000] Queue: 
+[2017-05-10 19:49:55.901000] Queue: 
+[2017-05-10 19:49:56.089000] Queue: 
+[2017-05-10 19:49:56.281000] Queue: 
+[2017-05-10 19:49:56.296000] Queue: 
+[2017-05-10 19:49:56.486000] Queue: 
+[2017-05-10 19:49:56.672000] Queue: 
+[2017-05-10 19:49:56.859000] Queue: 
+[2017-05-10 19:49:57.050000] Queue: 
+[2017-05-10 19:49:57.239000] Queue: 
+[2017-05-10 19:49:57.434000] Queue: 
+[2017-05-10 19:49:57.619000] Queue: 
+[2017-05-10 19:49:57.804000] Queue: 
+[2017-05-10 19:49:57.990000] Queue: 
+[2017-05-10 19:49:59.484000] Queue: 
+[2017-05-10 19:49:59.485000] 1 
+[2017-05-10 19:49:59.943000] Queue: 
+[2017-05-10 19:50:00.437000] Queue: 
+[2017-05-10 19:50:00.438000] 4 
+[2017-05-10 19:50:00.956000] Queue: 
+[2017-05-10 19:50:02.121000] Queue: 
+[2017-05-10 19:50:03.255000] Queue: 
+[2017-05-10 19:50:03.256000] 4 
+[2017-05-10 19:50:03.735000] Queue: 
+[2017-05-10 19:50:04.774000] Queue: 

@@ -1,0 +1,1394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>Test GUI</title>
+</head>
+<body>
+<h1>Test GUI</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Documentation</td>
+<td class="colspan4" colspan="4">Test integration and GUI functions.</td>
+</tr>
+<tr>
+<td class="name">Suite Setup</td>
+<td>Run Libra</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Suite Teardown</td>
+<td>Close</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>AutoItLibrary</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>SikuliLibrary</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="variable">
+<tr>
+<th class="name" colspan="5">Variables</th>
+</tr>
+<tr>
+<td class="name">${GPSD}</td>
+<td>Game Paused</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${STARTUP_X}</td>
+<td>880</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${STARTUP_Y}</td>
+<td>411</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="testcase">
+<tr>
+<th class="name" colspan="5">Test Cases</th>
+</tr>
+<tr>
+<td class="name"><a name="test_Check Button Linking - Startup Screen">Check Button Linking - Startup Screen</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Check if the buttons on Startup Screen are linked to the right screens.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Rounds</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go to Edit Contestants_Startup</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go to Test Buzzers_Startup</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go to Activity Log_Startup</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Start Game</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Round Screen</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Check Contestant Background">Check Contestant Background</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Check if buzzed contestant photo gets highlighted.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Start Button</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Stop Button</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Buzz and Get Background Color</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Check Button Linking - Game Paused Screen">Check Button Linking - Game Paused Screen</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Check if the buttons on Game Paused Screen are linked to the right screens.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Menu</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go to Edit Contestants_GamePaused</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go to Buzzer Test_GamePaused</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go to Activity Log_GamePaused</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Resume Game</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keywords</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Run Libra">Run Libra</a></td>
+<td>Run</td>
+<td>run.bat</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Libra v.2.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Set Rounds">Set Rounds</a></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${STARTUP_X}</td>
+<td>${STARTUP_Y}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Edit Rounds</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${EDITRNDS} =</td>
+<td>Win Get Title</td>
+<td>[ACTIVE]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${EDITRNDS}</td>
+<td>Edit Rounds</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>685</td>
+<td>267</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Rounds Summary</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>734</td>
+<td>635</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Libra v.2.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Go to Edit Contestants_Startup">Go to Edit Contestants_Startup</a></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${STARTUP_X}</td>
+<td>451</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Contestant Delegation</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${SCREENTITLE} =</td>
+<td>Win Get Title</td>
+<td>[ACTIVE]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${SCREENTITLE}</td>
+<td>Contestant Delegation</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>600</td>
+<td>534</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Go to Test Buzzers_Startup">Go to Test Buzzers_Startup</a></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${STARTUP_X}</td>
+<td>491</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Buzzer Test</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${SCREENTITLE} =</td>
+<td>Win Get Title</td>
+<td>[ACTIVE]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${SCREENTITLE}</td>
+<td>Buzzer Test</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>I</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>K</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>P</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>[</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>U</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_x} =</td>
+<td>Win Get Pos X</td>
+<td>Buzzer Test</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_y} =</td>
+<td>Win Get Pos Y</td>
+<td>Buzzer Test</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x+30}</td>
+<td>${win_y+156}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Go to Activity Log_Startup">Go to Activity Log_Startup</a></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${STARTUP_X}</td>
+<td>531</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Activity Log</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${SCREENTITLE} =</td>
+<td>Win Get Title</td>
+<td>[ACTIVE]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${SCREENTITLE}</td>
+<td>Activity Log</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_x} =</td>
+<td>Win Get Pos X</td>
+<td>Activity Log</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_y} =</td>
+<td>Win Get Pos Y</td>
+<td>Activity Log</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x+336}</td>
+<td>${win_y+445}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Start Game">Start Game</a></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>882</td>
+<td>292</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Round Screen">Round Screen</a></td>
+<td>Wait For Active Window</td>
+<td>Prefinal Round 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${RSCREENTITLE} =</td>
+<td>Win Get Title</td>
+<td>[ACTIVE]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${RSCREENTITLE}</td>
+<td>Prefinal Round 1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>881</td>
+<td>317</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Click Start Button">Click Start Button</a></td>
+<td>Wait For Active Window</td>
+<td>Libra v.2.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${MSCREENTITLE} =</td>
+<td>Win Get Title</td>
+<td>[ACTIVE]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${MSCREENTITLE}</td>
+<td>Libra v.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>810</td>
+<td>106</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Click Stop Button">Click Stop Button</a></td>
+<td>Process Wait</td>
+<td></td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>880</td>
+<td>103</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Buzz and Get Background Color">Buzz and Get Background Color</a></td>
+<td>Wait For Active Window</td>
+<td>Libra v.2.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>I</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>AutoItLibrary.Mouse Move</td>
+<td>537</td>
+<td>377</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${COLOR} =</td>
+<td>Pixel Get Color</td>
+<td>537</td>
+<td>377</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${COMP} =</td>
+<td>Convert to Integer</td>
+<td>6650755</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${COLOR}</td>
+<td>${COMP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Press Special Key</td>
+<td>ENTER</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>AutoItLibrary.Mouse Move</td>
+<td>750</td>
+<td>377</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${COLOR} =</td>
+<td>Pixel Get Color</td>
+<td>750</td>
+<td>377</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${COMP} =</td>
+<td>Convert to Integer</td>
+<td>6650755</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${COLOR}</td>
+<td>${COMP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Press Special Key</td>
+<td>ENTER</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>K</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>AutoItLibrary.Mouse Move</td>
+<td>963</td>
+<td>377</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${COLOR} =</td>
+<td>Pixel Get Color</td>
+<td>963</td>
+<td>377</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${COMP} =</td>
+<td>Convert to Integer</td>
+<td>6650755</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${COLOR}</td>
+<td>${COMP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Press Special Key</td>
+<td>ENTER</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>P</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>AutoItLibrary.Mouse Move</td>
+<td>526</td>
+<td>600</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${COLOR} =</td>
+<td>Pixel Get Color</td>
+<td>526</td>
+<td>600</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${COMP} =</td>
+<td>Convert to Integer</td>
+<td>6650755</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${COLOR}</td>
+<td>${COMP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Press Special Key</td>
+<td>ENTER</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>[</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>AutoItLibrary.Mouse Move</td>
+<td>756</td>
+<td>600</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${COLOR} =</td>
+<td>Pixel Get Color</td>
+<td>756</td>
+<td>600</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${COMP} =</td>
+<td>Convert to Integer</td>
+<td>6650755</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${COLOR}</td>
+<td>${COMP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Press Special Key</td>
+<td>ENTER</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>U</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>AutoItLibrary.Mouse Move</td>
+<td>965</td>
+<td>600</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${COLOR} =</td>
+<td>Pixel Get Color</td>
+<td>965</td>
+<td>600</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${COMP} =</td>
+<td>Convert to Integer</td>
+<td>6650755</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${COLOR}</td>
+<td>${COMP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Press Special Key</td>
+<td>ENTER</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Click Menu">Click Menu</a></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>343</td>
+<td>680</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>${GPSD}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${SCREENTITLE} =</td>
+<td>Win Get Title</td>
+<td>[ACTIVE]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${SCREENTITLE}</td>
+<td>${GPSD}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Go to Edit Contestants_GamePaused">Go to Edit Contestants_GamePaused</a></td>
+<td>${win_x} =</td>
+<td>Win Get Pos X</td>
+<td>${GPSD}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_y} =</td>
+<td>Win Get Pos Y</td>
+<td>${GPSD}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x + 80}</td>
+<td>${win_y + 120}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Contestant Delegation</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${SCREENTITLE} =</td>
+<td>Win Get Title</td>
+<td>[ACTIVE]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${SCREENTITLE}</td>
+<td>Contestant Delegation</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>600</td>
+<td>534</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Go to Buzzer Test_GamePaused">Go to Buzzer Test_GamePaused</a></td>
+<td>${win_x} =</td>
+<td>Win Get Pos X</td>
+<td>${GPSD}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_y} =</td>
+<td>Win Get Pos Y</td>
+<td>${GPSD}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x + 80}</td>
+<td>${win_y+180}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Buzzer Test</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${SCREENTITLE} =</td>
+<td>Win Get Title</td>
+<td>[ACTIVE]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${SCREENTITLE}</td>
+<td>Buzzer Test</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>I</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>K</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>P</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>[</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Send</td>
+<td>U</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>0.5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_x} =</td>
+<td>Win Get Pos X</td>
+<td>Buzzer Test</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_y} =</td>
+<td>Win Get Pos Y</td>
+<td>Buzzer Test</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x+30}</td>
+<td>${win_y+156}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Go to Activity Log_GamePaused">Go to Activity Log_GamePaused</a></td>
+<td>${win_x} =</td>
+<td>Win Get Pos X</td>
+<td>${GPSD}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_y} =</td>
+<td>Win Get Pos Y</td>
+<td>${GPSD}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x + 80}</td>
+<td>${win_y+250}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Activity Log</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${SCREENTITLE} =</td>
+<td>Win Get Title</td>
+<td>[ACTIVE]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${SCREENTITLE}</td>
+<td>Activity Log</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_x} =</td>
+<td>Win Get Pos X</td>
+<td>Activity Log</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_y} =</td>
+<td>Win Get Pos Y</td>
+<td>Activity Log</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x+336}</td>
+<td>${win_y+445}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Resume Game">Resume Game</a></td>
+<td>${win_x} =</td>
+<td>Win Get Pos X</td>
+<td>${GPSD}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${win_y} =</td>
+<td>Win Get Pos Y</td>
+<td>${GPSD}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mouse Click</td>
+<td>LEFT</td>
+<td>${win_x + 80}</td>
+<td>${win_y+60}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait For Active Window</td>
+<td>Libra v.2.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${SCREENTITLE} =</td>
+<td>Win Get Title</td>
+<td>[ACTIVE]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${SCREENTITLE}</td>
+<td>Libra v.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Close">Close</a></td>
+<td>Win Close</td>
+<td>Libra v.2.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Press Special Key</td>
+<td>ENTER</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>
