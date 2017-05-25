@@ -10,7 +10,7 @@ Python
 Baldelomar, Lopez, Traen, Uy
 
 ## Downloading 
-Libra v.2.0 may be obtained by downloading this repository to your device.
+Libra v.2.0 may be obtained by cloning or downloading this repository to your device.
 
 ## Installation
 For Libra v.2.0 to properly work, the following must be installed:
